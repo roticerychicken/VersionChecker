@@ -23,7 +23,7 @@ String v2 = com.versioncheck.jsp.CalculateVersion.getVersion(request.getParamete
 
 %>
 
-<h2><% out.print(v1);%> <% out.print(com.versioncheck.jsp.CalculateVersion.calculate(v1, v2)); %> <% out.print(v2); %> </h2>
+<h2><% if((v1.length() > 0)&&(v2.length() > 0)){out.print(v1);}%> <% out.print(com.versioncheck.jsp.CalculateVersion.calculate(v1, v2)); %> <% if((v1.length() > 0)&&(v2.length() > 0)){out.print(v2);} %> </h2>
 
 
 </body>

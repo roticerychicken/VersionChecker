@@ -3,10 +3,7 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 public class CalculateVersion {
 	public static String getVersion(String vn) {
-		//String[] r = "9.2.4.5".split("\\.");
-	
-	
-		//return r[1]+" asdf";
+
 		if(vn != null ) {
 			String re = "[0-9][0-9.]*";
 			
@@ -14,7 +11,11 @@ public class CalculateVersion {
 			Matcher mt = p.matcher(vn);
 
 			if(mt.matches()) {
-				return mt.group(0);
+				if(mt.groupCount() > 0) {
+					return "";
+				} else {
+					return mt.group(0);
+				}
 			} else {
 				return "";
 			}
@@ -22,8 +23,7 @@ public class CalculateVersion {
 			return "";
 		}
 	}
-	//1.0.1.1
-	//1.0.1.1.0.0.1
+
 	public static String calculate(String v1, String v2) {
 		
 		
@@ -65,7 +65,7 @@ public class CalculateVersion {
 				}
 			}
 		} else {
-			return " Missing Input ";
+			return " Invalid Input ";
 		}
 		
 		return " is equal to ";
