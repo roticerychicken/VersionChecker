@@ -1,0 +1,35 @@
+html {
+	background: #F0F8FF;
+}
+body {
+	text-align: center;
+}
+form {
+	 display:flex;
+	 flex-direction: column;
+	 flex-shrink: 2;
+	 order: 2;
+	 margin-left:20%;
+	 margin-right:20%;
+	 margin-top:5em;
+}
+h2 {
+	margin-top: 2em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:gray;
+}
+input[type="submit"] {
+	margin-top:2em;
+	height:3em;
+	width:15em;
+	font-size:1em;
+	background:gray;
+	color:white;
+	font-weight:bold;
+}
+input[type="text"] {
+	font-weight:bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 3em;
+	padding: 0.2em;
+}

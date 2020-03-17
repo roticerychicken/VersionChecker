@@ -6,25 +6,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="CSS/Style.css"/>
+
 <title>Insert title here</title>
 </head>
 <body>
-<form action="">
-	Version 1: <input type="text" name="v1" />
-	<br>
-	Version 2: <input type="text" name="v2" />
+<form action="VersionServlet" method="GET">
+	<input type="text" placeholder="Version 1" name="v1" autocomplete="off" />
+	<input type="text" placeholder="Version 2" name="v2" autocomplete="off" />
 	<input type="submit" value="Check">
 </form>
- 
-<%
-
-String v1 = com.versioncheck.jsp.CalculateVersion.getVersion(request.getParameter("v1"));
-String v2 = com.versioncheck.jsp.CalculateVersion.getVersion(request.getParameter("v2"));
-
-%>
-
-<h2><% if((v1.length() > 0)&&(v2.length() > 0)){out.print(v1);}%> <% out.print(com.versioncheck.jsp.CalculateVersion.calculate(v1, v2)); %> <% if((v1.length() > 0)&&(v2.length() > 0)){out.print(v2);} %> </h2>
-
-
 </body>
 </html>
